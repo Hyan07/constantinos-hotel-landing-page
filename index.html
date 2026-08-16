@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Landing page independente do Constantino's Hotel, feita apenas com HTML, CSS e JavaScript.">
+  <meta name="theme-color" content="#071c2f">
+  <title>Constantino's Hotel — Hospedagem com personalidade</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page-noise" aria-hidden="true"></div>
+  <div class="ambient ambient--one" aria-hidden="true"></div>
+  <div class="ambient ambient--two" aria-hidden="true"></div>
+
+  <header class="site-header" id="topo">
+    <a class="brand" href="#inicio" aria-label="Constantino's Hotel — início">
+      <span class="brand__seal" aria-hidden="true">C</span>
+      <span class="brand__text">
+        <strong>Constantino's</strong>
+        <small>Hotel</small>
+      </span>
+    </a>
+
+    <nav class="desktop-nav" aria-label="Navegação principal">
+      <a href="#hotel">O hotel</a>
+      <a href="#acomodacoes">Acomodações</a>
+      <a href="#experiencia">Experiência</a>
+      <a href="#contato">Contato</a>
+    </nav>
+
+    <div class="header-actions">
+      <a class="system-link" href="#" data-system-link>Área administrativa</a>
+      <a class="button button--header" href="#reservar">Reservar</a>
+      <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <nav class="mobile-nav" aria-label="Navegação móvel" hidden>
+      <a href="#hotel">O hotel</a>
+      <a href="#acomodacoes">Acomodações</a>
+      <a href="#experiencia">Experiência</a>
+      <a href="#contato">Contato</a>
+      <a href="#reservar">Reservar agora</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="hero-orbit hero-orbit--one" aria-hidden="true"></div>
+      <div class="hero-orbit hero-orbit--two" aria-hidden="true"></div>
+
+      <div class="hero-building" aria-hidden="true">
+        <div class="building building--rear">
+          <span class="building__windows"></span>
+        </div>
+        <div class="building building--main">
+          <span class="building__topline"></span>
+          <span class="building__windows"></span>
+          <span class="building__entrance"></span>
+          <span class="building__marquee">CONSTANTINO'S</span>
+        </div>
+        <div class="building building--side">
+          <span class="building__windows"></span>
+        </div>
+        <div class="street-line"></div>
+        <div class="plant plant--left"></div>
+        <div class="plant plant--right"></div>
+      </div>
+
+      <div class="hero-content container">
+        <div class="hero-copy reveal">
+          <p class="kicker kicker--light">Uma estadia com identidade</p>
+          <h1>Chegue como hóspede.<br><em>Fique como parte da casa.</em></h1>
+          <p class="hero-lead">Conforto, atendimento próximo e uma experiência feita para quem quer descansar sem abrir mão de praticidade.</p>
+          <div class="hero-actions">
+            <a class="button button--gold" href="#reservar">Consultar estadia <span>↗</span></a>
+            <a class="link-arrow" href="#hotel">Conheça o hotel <span>→</span></a>
+          </div>
+        </div>
+
+        <div class="hero-note reveal reveal--delay">
+          <span class="hero-note__index">01</span>
+          <div>
+            <small>Constantino's Hotel</small>
+            <strong>Uma pausa do lado certo da cidade.</strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-scroll" aria-hidden="true">
+        <span>Role para descobrir</span>
+        <i></i>
+      </div>
+    </section>
+
+    <section class="booking-wrap" id="reservar">
+      <div class="container">
+        <form class="booking-panel reveal" id="booking-form">
+          <div class="booking-panel__title">
+            <small>Reserva direta</small>
+            <strong>Planeje sua estadia</strong>
+          </div>
+
+          <label class="booking-field">
+            <span>Check-in</span>
+            <input type="date" name="checkin" id="checkin" required>
+          </label>
+
+          <label class="booking-field">
+            <span>Check-out</span>
+            <input type="date" name="checkout" id="checkout" required>
+          </label>
+
+          <label class="booking-field booking-field--compact">
+            <span>Adultos</span>
+            <select name="adults" id="adults">
+              <option value="1">1</option>
+              <option value="2" selected>2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </label>
+
+          <label class="booking-field booking-field--compact">
+            <span>Crianças</span>
+            <select name="children" id="children">
+              <option value="0" selected>0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+            </select>
+          </label>
+
+          <button class="booking-submit" type="submit">
+            <span>Ver opções</span>
+            <b>→</b>
+          </button>
+        </form>
+
+        <div class="booking-response" id="booking-response" hidden></div>
+      </div>
+    </section>
+
+    <section class="intro-section" id="hotel">
+      <div class="container intro-grid">
+        <div class="section-number reveal">01</div>
+        <div class="intro-heading reveal">
+          <p class="kicker">O Constantino's</p>
+          <h2>Hospitalidade sem excesso.<br><em>Conforto sem distância.</em></h2>
+        </div>
+        <div class="intro-copy reveal reveal--delay">
+          <p class="intro-copy__lead">Um hotel pensado para quem valoriza uma boa noite, um atendimento humano e a sensação de que tudo está no lugar certo.</p>
+          <p>Da chegada ao último café antes do check-out, cada detalhe foi organizado para deixar a estadia mais simples, agradável e memorável.</p>
+          <a class="link-arrow link-arrow--dark" href="#acomodacoes">Ver acomodações <span>→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="signature-band" aria-label="Destaques">
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee__track">
+          <span>CONFORTO</span><i>✦</i><span>ACOLHIMENTO</span><i>✦</i><span>DESCANSO</span><i>✦</i><span>PRATICIDADE</span><i>✦</i>
+          <span>CONFORTO</span><i>✦</i><span>ACOLHIMENTO</span><i>✦</i><span>DESCANSO</span><i>✦</i><span>PRATICIDADE</span><i>✦</i>
+        </div>
+      </div>
+    </section>
+
+    <section class="rooms-section" id="acomodacoes">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <p class="kicker">Acomodações</p>
+            <h2>Seu quarto não precisa ser só onde você dorme.</h2>
+          </div>
+          <p>Três propostas visuais para a landing de teste. Os nomes, capacidades e valores podem ser alterados diretamente no HTML.</p>
+        </div>
+
+        <div class="rooms-grid">
+          <article class="room-card reveal">
+            <div class="room-visual room-visual--classic" aria-hidden="true">
+              <div class="room-window"></div>
+              <div class="room-curtain"></div>
+              <div class="room-bed"><span></span></div>
+              <div class="room-nightstand"></div>
+              <div class="room-lamp"></div>
+            </div>
+            <div class="room-card__body">
+              <div class="room-card__topline"><span>01</span><small>Até 2 hóspedes</small></div>
+              <h3>Clássico</h3>
+              <p>Essencial, confortável e equilibrado para estadias curtas ou viagens a trabalho.</p>
+              <div class="room-card__footer"><span>A partir de</span><strong>R$ 189<small>/noite</small></strong></div>
+            </div>
+          </article>
+
+          <article class="room-card room-card--lift reveal reveal--delay">
+            <div class="room-visual room-visual--premium" aria-hidden="true">
+              <div class="room-window"></div>
+              <div class="room-curtain"></div>
+              <div class="room-bed"><span></span></div>
+              <div class="room-chair"></div>
+              <div class="room-art"></div>
+            </div>
+            <div class="room-card__body">
+              <div class="room-card__topline"><span>02</span><small>Até 3 hóspedes</small></div>
+              <h3>Premium</h3>
+              <p>Mais espaço, acabamento acolhedor e aquele pouco a mais que muda a experiência.</p>
+              <div class="room-card__footer"><span>A partir de</span><strong>R$ 239<small>/noite</small></strong></div>
+            </div>
+          </article>
+
+          <article class="room-card reveal reveal--delay-2">
+            <div class="room-visual room-visual--family" aria-hidden="true">
+              <div class="room-window"></div>
+              <div class="room-curtain"></div>
+              <div class="room-bed room-bed--wide"><span></span></div>
+              <div class="room-sofa"></div>
+              <div class="room-plant"></div>
+            </div>
+            <div class="room-card__body">
+              <div class="room-card__topline"><span>03</span><small>Até 4 hóspedes</small></div>
+              <h3>Família</h3>
+              <p>Um espaço mais generoso para dividir a viagem sem dividir o conforto.</p>
+              <div class="room-card__footer"><span>A partir de</span><strong>R$ 289<small>/noite</small></strong></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="experience-section" id="experiencia">
+      <div class="experience-shape experience-shape--one" aria-hidden="true"></div>
+      <div class="experience-shape experience-shape--two" aria-hidden="true"></div>
+      <div class="container experience-layout">
+        <div class="experience-copy reveal">
+          <p class="kicker kicker--light">A experiência</p>
+          <h2>O luxo está em<br><em>não precisar pensar em tudo.</em></h2>
+          <p>Uma experiência de hospedagem se torna boa quando o essencial funciona tão bem que quase desaparece.</p>
+        </div>
+
+        <div class="experience-list">
+          <article class="experience-item reveal">
+            <span>01</span>
+            <div><h3>Chegada simples</h3><p>Informações claras, recepção objetiva e menos tempo parado.</p></div>
+            <i>↗</i>
+          </article>
+          <article class="experience-item reveal reveal--delay">
+            <span>02</span>
+            <div><h3>Ambientes tranquilos</h3><p>Uma linguagem visual sóbria e confortável do quarto às áreas comuns.</p></div>
+            <i>↗</i>
+          </article>
+          <article class="experience-item reveal reveal--delay-2">
+            <span>03</span>
+            <div><h3>Atendimento próximo</h3><p>Hospitalidade humana, sem fazer o hóspede se sentir apenas mais um número.</p></div>
+            <i>↗</i>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery-section">
+      <div class="container gallery-grid">
+        <article class="gallery-card gallery-card--large reveal">
+          <div class="gallery-art gallery-art--lobby" aria-hidden="true">
+            <span class="lobby-sofa"></span><span class="lobby-table"></span><span class="lobby-tree"></span><span class="lobby-light"></span>
+          </div>
+          <div class="gallery-caption"><small>Chegada</small><strong>Uma primeira impressão que desacelera.</strong></div>
+        </article>
+        <article class="gallery-card reveal reveal--delay">
+          <div class="gallery-art gallery-art--breakfast" aria-hidden="true">
+            <span class="breakfast-table"></span><span class="breakfast-cup"></span><span class="breakfast-window"></span>
+          </div>
+          <div class="gallery-caption"><small>Manhã</small><strong>Comece no seu tempo.</strong></div>
+        </article>
+        <article class="gallery-card reveal reveal--delay-2">
+          <div class="gallery-art gallery-art--night" aria-hidden="true">
+            <span class="night-window"></span><span class="night-chair"></span><span class="night-lamp"></span>
+          </div>
+          <div class="gallery-caption"><small>Noite</small><strong>Silêncio também é serviço.</strong></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="stats-section">
+      <div class="container stats-grid">
+        <div class="stat reveal"><strong data-counter="24">0</strong><span>horas de acolhimento</span></div>
+        <div class="stat reveal reveal--delay"><strong data-counter="3">0</strong><span>categorias de acomodação</span></div>
+        <div class="stat reveal reveal--delay-2"><strong data-counter="100">0</strong><span>% foco no hóspede</span></div>
+        <div class="stat stat--quote reveal"><p>“Uma boa hospedagem é aquela que faz você se sentir bem antes mesmo de perceber por quê.”</p></div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contato">
+      <div class="container contact-layout">
+        <div class="contact-copy reveal">
+          <p class="kicker">Fale com a gente</p>
+          <h2>Pronto para reservar<br><em>seu próximo descanso?</em></h2>
+          <p>Esta versão é um projeto estático independente. Você pode trocar telefone, endereço, preços e links direto nos arquivos.</p>
+          <a class="button button--dark" href="#reservar">Começar reserva <span>→</span></a>
+        </div>
+
+        <div class="contact-card reveal reveal--delay">
+          <div class="contact-card__top">
+            <span class="brand__seal">C</span>
+            <small>Constantino's Hotel</small>
+          </div>
+          <div class="contact-row"><span>Telefone</span><a href="tel:+553500000000">(35) 0000-0000</a></div>
+          <div class="contact-row"><span>E-mail</span><a href="mailto:reservas@constantinoshotel.com.br">reservas@constantinoshotel.com.br</a></div>
+          <div class="contact-row"><span>Endereço</span><strong>Endereço do hotel — MG</strong></div>
+          <div class="contact-row contact-row--split"><div><span>Check-in</span><strong>14:00</strong></div><div><span>Check-out</span><strong>11:00</strong></div></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-layout">
+      <a class="brand brand--footer" href="#topo">
+        <span class="brand__seal">C</span>
+        <span class="brand__text"><strong>Constantino's</strong><small>Hotel</small></span>
+      </a>
+      <p>Landing page estática — HTML, CSS e JavaScript puro.</p>
+      <div class="footer-links"><a href="#hotel">Hotel</a><a href="#acomodacoes">Quartos</a><a href="#contato">Contato</a></div>
+    </div>
+  </footer>
+
+  <dialog class="reserve-dialog" id="reserve-dialog">
+    <button class="dialog-close" type="button" data-dialog-close aria-label="Fechar">×</button>
+    <div class="dialog-content">
+      <p class="kicker">Solicitação de reserva</p>
+      <h2>Quase tudo pronto.</h2>
+      <p class="dialog-summary" id="dialog-summary"></p>
+
+      <form id="guest-form" class="guest-form">
+        <label class="form-field form-field--full"><span>Nome completo</span><input name="name" autocomplete="name" required minlength="3" placeholder="Seu nome"></label>
+        <label class="form-field"><span>Telefone</span><input name="phone" autocomplete="tel" placeholder="(00) 00000-0000"></label>
+        <label class="form-field"><span>E-mail</span><input name="email" type="email" autocomplete="email" placeholder="voce@email.com"></label>
+        <label class="form-field form-field--full"><span>Observações</span><textarea name="notes" rows="3" placeholder="Ex.: chegada prevista às 18h"></textarea></label>
+        <p class="form-message form-field--full" id="form-message" hidden></p>
+        <button class="button button--dark form-field--full" type="submit">Salvar solicitação neste navegador <span>→</span></button>
+      </form>
+
+      <div class="dialog-success" id="dialog-success" hidden>
+        <span class="success-icon">✓</span>
+        <h3>Solicitação salva.</h3>
+        <p>Como esta landing é 100% estática, os dados foram armazenados apenas no <strong>localStorage</strong> deste navegador para demonstração.</p>
+        <button class="button button--dark" type="button" data-dialog-close>Concluir</button>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
