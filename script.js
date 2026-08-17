@@ -11,25 +11,51 @@ const formMessage = document.getElementById('form-message');
 let currentSearch = null;
 
 const SYSTEM_URL = 'https://aliceblue-raven-140682.hostingersite.com/sistema#/dashboard';
-document.querySelector('[data-system-link]').href = SYSTEM_URL;
+const systemLink = document.querySelector('[data-system-link]');
+if (systemLink) systemLink.href = SYSTEM_URL;
 
-// Carrega os refinamentos de responsividade sem adicionar dependências ou frameworks.
-if (!document.querySelector('link[href="responsive.css"]')) {
-  const responsiveStylesheet = document.createElement('link');
-  responsiveStylesheet.rel = 'stylesheet';
-  responsiveStylesheet.href = 'responsive.css';
-  document.head.appendChild(responsiveStylesheet);
-}
+// Força uma versão nova do CSS responsivo para evitar servir uma cópia antiga em cache.
+const oldResponsiveStylesheet = document.querySelector('link[href^="responsive.css"]');
+if (oldResponsiveStylesheet) oldResponsiveStylesheet.remove();
+const responsiveStylesheet = document.createElement('link');
+responsiveStylesheet.rel = 'stylesheet';
+responsiveStylesheet.href = 'responsive.css?v=20260816-2215';
+responsiveStylesheet.dataset.responsiveCss = 'true';
+document.head.appendChild(responsiveStylesheet);
 
-// O link administrativo do cabeçalho desktop é ocultado em telas menores.
-// Criamos uma entrada dedicada dentro do menu mobile para manter o acesso sempre visível.
+// Acesso administrativo dedicado dentro do menu mobile.
 if (mobileNav && !mobileNav.querySelector('.mobile-admin-link')) {
   const mobileAdminLink = document.createElement('a');
   mobileAdminLink.href = SYSTEM_URL;
   mobileAdminLink.className = 'mobile-admin-link';
   mobileAdminLink.textContent = 'Área administrativa';
+  mobileAdminLink.style.cssText = 'display:flex;align-items:center;justify-content:space-between;margin-top:10px;padding:14px 16px;border:0;background:#0b2942;color:#fff;font-weight:800;';
+  mobileAdminLink.innerHTML = '<span>Área administrativa</span><b aria-hidden="true" style="color:#e4b85f;font-size:1rem">↗</b>';
   mobileNav.appendChild(mobileAdminLink);
 }
+
+// Atalho ADM sempre visível no cabeçalho de tablets e celulares, sem depender do CSS responsivo.
+const headerActions = document.querySelector('.header-actions');
+let mobileAdminShortcut = document.querySelector('.mobile-admin-shortcut');
+if (headerActions && !mobileAdminShortcut) {
+  mobileAdminShortcut = document.createElement('a');
+  mobileAdminShortcut.href = SYSTEM_URL;
+  mobileAdminShortcut.className = 'mobile-admin-shortcut';
+  mobileAdminShortcut.textContent = 'ADM';
+  mobileAdminShortcut.setAttribute('aria-label', 'Abrir área administrativa');
+  headerActions.insertBefore(mobileAdminShortcut, menuToggle);
+}
+
+function syncMobileAdminShortcut() {
+  if (!mobileAdminShortcut) return;
+  const mobile = window.matchMedia('(max-width: 1080px)').matches;
+  mobileAdminShortcut.style.cssText = mobile
+    ? 'display:inline-flex;width:42px;height:42px;align-items:center;justify-content:center;border:1px solid currentColor;color:inherit;font-size:.58rem;font-weight:900;letter-spacing:.08em;opacity:.92;'
+    : 'display:none';
+}
+
+syncMobileAdminShortcut();
+window.addEventListener('resize', syncMobileAdminShortcut, { passive: true });
 
 function toLocalDate(date) {
   const year = date.getFullYear();
