@@ -10,7 +10,7 @@ const dialogSuccess = document.getElementById('dialog-success');
 const formMessage = document.getElementById('form-message');
 let currentSearch = null;
 
-const SYSTEM_URL = '#';
+const SYSTEM_URL = 'https://aliceblue-raven-140682.hostingersite.com/sistema#/dashboard';
 document.querySelector('[data-system-link]').href = SYSTEM_URL;
 
 function toLocalDate(date) {
