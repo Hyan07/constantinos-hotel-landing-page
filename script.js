@@ -13,6 +13,24 @@ let currentSearch = null;
 const SYSTEM_URL = 'https://aliceblue-raven-140682.hostingersite.com/sistema#/dashboard';
 document.querySelector('[data-system-link]').href = SYSTEM_URL;
 
+// Carrega os refinamentos de responsividade sem adicionar dependências ou frameworks.
+if (!document.querySelector('link[href="responsive.css"]')) {
+  const responsiveStylesheet = document.createElement('link');
+  responsiveStylesheet.rel = 'stylesheet';
+  responsiveStylesheet.href = 'responsive.css';
+  document.head.appendChild(responsiveStylesheet);
+}
+
+// O link administrativo do cabeçalho desktop é ocultado em telas menores.
+// Criamos uma entrada dedicada dentro do menu mobile para manter o acesso sempre visível.
+if (mobileNav && !mobileNav.querySelector('.mobile-admin-link')) {
+  const mobileAdminLink = document.createElement('a');
+  mobileAdminLink.href = SYSTEM_URL;
+  mobileAdminLink.className = 'mobile-admin-link';
+  mobileAdminLink.textContent = 'Área administrativa';
+  mobileNav.appendChild(mobileAdminLink);
+}
+
 function toLocalDate(date) {
   const year = date.getFullYear();
   const month = String(date.getMonth() + 1).padStart(2, '0');
