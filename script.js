@@ -1,35 +1,19 @@
 'use strict';
 
-const WHATSAPP_NUMBER = '5535988448287';
-const WHATSAPP_MESSAGE = 'Olá! Estou em rota por Passos - MG e gostaria de consultar disponibilidade de quarto e vaga no estacionamento para veículo pesado.';
-const SYSTEM_URL = 'https://gestao.constantinoshotel.com.br/';
-
-const header = document.querySelector('.site-header');
 const menuToggle = document.querySelector('.menu-toggle');
-const mobileNav = document.querySelector('.mobile-nav');
+const mobileNav = document.getElementById('mobile-nav');
+const whatsappLinks = document.querySelectorAll('[data-whatsapp]');
 const year = document.getElementById('year');
+const reveals = document.querySelectorAll('.reveal');
 
-function whatsappUrl() {
-  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
-}
-
-document.querySelectorAll('[data-whatsapp]').forEach((link) => {
-  link.href = whatsappUrl();
-});
-
-document.querySelectorAll('[data-system-link]').forEach((link) => {
-  link.href = SYSTEM_URL;
-});
+const WHATSAPP_NUMBER = '5535988448287';
+const WHATSAPP_MESSAGE = 'Olá! Vi o site do Constantino\'s Hotel e gostaria de consultar disponibilidade de quarto e estacionamento.';
 
 if (year) year.textContent = new Date().getFullYear();
 
-function syncHeader() {
-  if (!header) return;
-  header.classList.toggle('is-scrolled', window.scrollY > 18);
-}
-
-syncHeader();
-window.addEventListener('scroll', syncHeader, { passive: true });
+whatsappLinks.forEach((link) => {
+  link.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
+});
 
 function closeMenu() {
   if (!menuToggle || !mobileNav) return;
@@ -41,46 +25,42 @@ function closeMenu() {
 
 if (menuToggle && mobileNav) {
   menuToggle.addEventListener('click', () => {
-    const willOpen = menuToggle.getAttribute('aria-expanded') !== 'true';
-    menuToggle.setAttribute('aria-expanded', String(willOpen));
-    menuToggle.setAttribute('aria-label', willOpen ? 'Fechar menu' : 'Abrir menu');
-    mobileNav.hidden = !willOpen;
-    document.body.classList.toggle('menu-open', willOpen);
+    const open = menuToggle.getAttribute('aria-expanded') === 'true';
+    menuToggle.setAttribute('aria-expanded', String(!open));
+    menuToggle.setAttribute('aria-label', open ? 'Abrir menu' : 'Fechar menu');
+    mobileNav.hidden = open;
+    document.body.classList.toggle('menu-open', !open);
   });
 
   mobileNav.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeMenu));
 
   window.addEventListener('resize', () => {
-    if (window.innerWidth > 960) closeMenu();
+    if (window.innerWidth > 1180) closeMenu();
   }, { passive: true });
 }
 
-const revealItems = document.querySelectorAll('.reveal');
-
-if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-  const revealObserver = new IntersectionObserver((entries, observer) => {
+if ('IntersectionObserver' in window) {
+  const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (!entry.isIntersecting) return;
       entry.target.classList.add('is-visible');
       observer.unobserve(entry.target);
     });
-  }, { threshold: 0.12, rootMargin: '0px 0px -35px 0px' });
+  }, { threshold: 0.12, rootMargin: '0px 0px -35px' });
 
-  revealItems.forEach((item) => revealObserver.observe(item));
+  reveals.forEach((item) => observer.observe(item));
 } else {
-  revealItems.forEach((item) => item.classList.add('is-visible'));
+  reveals.forEach((item) => item.classList.add('is-visible'));
 }
 
-document.querySelectorAll('a[href^="#"]').forEach((link) => {
-  link.addEventListener('click', (event) => {
-    const id = link.getAttribute('href');
+// Mantém links internos suaves sem interferir em telefone, WhatsApp ou links externos.
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  anchor.addEventListener('click', (event) => {
+    const id = anchor.getAttribute('href');
     if (!id || id === '#') return;
     const target = document.querySelector(id);
     if (!target) return;
-
     event.preventDefault();
-    const top = target.getBoundingClientRect().top + window.scrollY - 78;
-    window.scrollTo({ top, behavior: 'smooth' });
-    history.replaceState(null, '', id);
+    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
 });
