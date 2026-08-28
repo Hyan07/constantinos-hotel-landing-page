@@ -1,108 +1,181 @@
 @media (max-width: 1180px) {
-  :root { --header-h: 76px; }
-  .header-highlight { display: none; }
-  .header-shell { grid-template-columns: auto 1fr auto; }
-  .hero-layout { grid-template-columns: 1.05fr .95fr; gap: 42px; }
-  .hero h1 { font-size: clamp(3.1rem, 5.1vw, 4.9rem); }
-  .route-badge { right: -5px; }
-  .floating-note { left: -8px; }
+  :root { --container: min(1120px, calc(100% - 36px)); }
+  .desktop-nav { display: none; }
+  .header-phone { margin-left: auto; }
+  .menu-toggle {
+    display: inline-grid;
+    width: 50px;
+    height: 50px;
+    place-content: center;
+    gap: 5px;
+    padding: 0;
+    border: 2px solid rgba(255,255,255,.65);
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+  }
+  .menu-toggle span { width: 20px; height: 2px; background: currentColor; transition: .2s ease; }
+  .menu-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .menu-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+  .menu-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  .mobile-nav {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    background: #fff;
+    color: var(--blue);
+    border-bottom: 4px solid var(--blue);
+    padding: 20px 22px 24px;
+    box-shadow: 0 20px 45px rgba(0,0,70,.18);
+  }
+  .mobile-nav:not([hidden]) { display: grid; }
+  .mobile-nav a { padding: 14px 4px; border-bottom: 1px solid rgba(0,0,153,.14); font: 800 22px/1 var(--font-display); text-transform: uppercase; }
+  .mobile-nav__cta { margin-top: 14px; padding: 17px !important; background: var(--blue); color: #fff !important; text-align: center; }
+  .hero-main { grid-template-columns: 1fr minmax(340px, .7fr); gap: 34px; padding-left: 42px; }
+  .parking-card { padding-inline: 26px; }
+  .vehicle-name { font-size: 21px; }
   .amenities-grid { grid-template-columns: repeat(2, 1fr); }
-  .amenity-card { min-height: 330px; }
-  .amenity-icon { margin-top: 42px; }
-  .fleet-layout, .location-layout { gap: 60px; }
+  .fleet-grid { gap: 58px; }
 }
-@media (max-width: 960px) {
-  .desktop-nav, .button--header { display: none; }
-  .menu-toggle { display: block; color: var(--white); justify-self: end; }
-  .header-shell { grid-template-columns: auto 1fr auto; }
-  .header-shell .menu-toggle { grid-column: 3; }
-  .section { padding: 92px 0; }
-  .hero { min-height: auto; padding: 145px 0 84px; }
-  .hero-layout { grid-template-columns: 1fr; gap: 58px; }
+
+@media (max-width: 900px) {
+  .section { padding: 86px 0; }
+  .header-shell { min-height: 74px; }
+  .brand { min-width: 160px; }
+  .brand-name { font-size: 26px; }
+  .brand-hotel { font-size: 13px; }
+  .header-phone { display: none; }
+  .header-whatsapp { margin-left: auto; min-height: 46px; padding-inline: 16px; }
+
+  .hero { padding-top: 38px; }
+  .hero-shell { grid-template-columns: 76px 1fr; }
+  .hotel-rail { padding-bottom: 0; }
+  .hotel-rail span { font-size: 58px; }
+  .hero-main { grid-template-columns: 1fr; gap: 54px; padding: 15px 0 58px 34px; }
   .hero-copy { max-width: 760px; }
-  .hero-visual { min-height: 500px; width: min(100%, 620px); margin-inline: auto; }
-  .hero-trust { max-width: 620px; }
-  .hero-bottom-line { display: none; }
-  .quick-strip__grid { grid-template-columns: 1fr; }
-  .quick-item { min-height: 86px; border-right: 1px solid rgba(8,25,33,.16); border-bottom: 1px solid rgba(8,25,33,.16); }
-  .about-layout { grid-template-columns: 1fr; gap: 30px; }
-  .about-copy { padding-top: 0; max-width: 680px; }
-  .section-heading { grid-template-columns: 1fr; gap: 0; }
-  .section-heading .section-index { margin-top: 0; }
-  .fleet-layout, .location-layout { grid-template-columns: 1fr; }
-  .fleet-visual { min-height: 480px; }
-  .fleet-copy { max-width: 680px; }
-  .location-copy { max-width: 720px; }
-  .location-card { min-height: 430px; }
-  .final-cta__inner { grid-template-columns: 1fr; gap: 32px; }
-  .final-cta__action { justify-self: start; }
-  .footer-grid { grid-template-columns: 1fr 1fr; }
-  .footer-links { grid-column: 1 / -1; }
+  .hero h1 { font-size: clamp(54px, 10vw, 86px); }
+  .hero-sign { justify-self: start; max-width: 500px; }
+  .contact-sign { width: 78%; }
+
+  .intro-grid,
+  .fleet-grid,
+  .location-grid { grid-template-columns: 1fr; gap: 56px; }
+  .intro-copy { padding-top: 0; }
+  .section-heading { grid-template-columns: 1fr; gap: 15px; }
+  .fleet-panel { min-height: 460px; max-width: 620px; }
+  .fleet-copy { max-width: 720px; }
+  .location-contact { max-width: 100%; }
+  .route-card { min-height: 400px; }
+  .final-cta__grid { grid-template-columns: 110px 1fr; gap: 42px; }
+  .final-cta__hotel { font-size: 78px; }
 }
-@media (max-width: 680px) {
-  :root { --header-h: 70px; --radius: 20px; }
-  .container { width: min(calc(100% - 30px), var(--container)); }
-  .section { padding: 74px 0; }
-  .header-shell { width: calc(100% - 28px); }
-  .brand-mark { width: 38px; height: 38px; font-size: 1.25rem; }
-  .brand-copy strong { font-size: 1rem; }
-  .brand-copy small { font-size: .46rem; }
-  .menu-toggle { width: 42px; height: 42px; }
-  .mobile-nav { padding-inline: 18px; }
-  .hero { padding: 124px 0 60px; }
-  .hero-grid { background-size: 58px 58px; }
-  .hero h1 { font-size: clamp(2.7rem, 13vw, 4rem); line-height: .98; }
-  .hero-lead { margin-top: 22px; font-size: .94rem; line-height: 1.62; }
-  .hero-actions { align-items: stretch; flex-direction: column; gap: 14px; }
-  .hero-actions .button { width: 100%; min-height: 56px; }
-  .hero-actions .text-link { justify-content: center; }
-  .hero-trust { margin-top: 38px; grid-template-columns: 1fr; padding-top: 18px; gap: 12px; }
-  .hero-trust span br { display: none; }
-  .hero-visual { min-height: 405px; }
-  .visual-card { width: 94%; border-radius: 20px; transform: rotate(.7deg); }
-  .visual-card__top { height: 66px; padding: 20px 20px 0; }
-  .visual-card__top span { font-size: 1.12rem; }
-  .truck-scene { height: calc(100% - 126px); }
-  .visual-card__footer { height: 60px; padding: 0 20px; }
-  .visual-card__footer > span { width: 36px; height: 36px; }
-  .truck { left: 6%; width: 76%; transform: scale(.82); transform-origin: left bottom; }
-  .truck--back { transform: scale(.56); }
-  .route-badge { width: 88px; right: -1px; top: 0; padding: 13px; }
-  .route-badge strong { font-size: 1.3rem; }
-  .floating-note { left: 0; bottom: 16px; padding: 10px 12px; font-size: .58rem; }
-  .quick-item { padding: 18px; }
-  .section-intro h2, .section-heading h2, .fleet-copy h2, .location-copy h2 { font-size: clamp(2.5rem, 12vw, 3.65rem); }
-  .about-copy .about-lead { font-size: 1.25rem; }
-  .about-contact { grid-template-columns: 1fr; }
-  .about-contact span { grid-row: auto; }
+
+@media (max-width: 640px) {
+  :root { --container: calc(100% - 28px); }
+  .section { padding: 68px 0; }
+  .site-header { position: sticky; }
+  .header-shell { width: calc(100% - 22px); gap: 10px; }
+  .brand { min-width: 0; flex: 1; }
+  .brand-name { font-size: 23px; }
+  .brand-hotel { font-size: 11px; letter-spacing: .34em; }
+  .header-whatsapp { display: none; }
+  .menu-toggle { width: 44px; height: 44px; }
+
+  .hero { min-height: auto; padding-top: 18px; }
+  .hero-shell { display: block; }
+  .hotel-rail {
+    width: 100%;
+    min-height: 64px;
+    border-right: 0;
+    border-bottom: 2px solid rgba(255,255,255,.22);
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 6px 14px;
+  }
+  .hotel-rail span { font-size: 50px; line-height: 1; }
+  .hero-main { padding: 38px 0 46px; display: block; }
+  .hero h1 { font-size: clamp(52px, 16vw, 76px); line-height: .86; }
+  .hero-lead { font-size: 15px; line-height: 1.68; margin-top: 24px; }
+  .hero-actions { display: grid; }
+  .hero-actions .button { width: 100%; }
+  .hero-address { align-items: flex-start; }
+  .hero-sign { margin-top: 48px; max-width: 100%; }
+  .parking-card { border-radius: 24px; padding: 28px 20px 22px; }
+  .parking-symbol { width: 104px; height: 104px; border-width: 10px; margin-bottom: 20px; }
+  .parking-symbol span { font-size: 65px; }
+  .parking-kicker { font-size: 29px; }
+  .parking-card h2 { font-size: 31px; margin-bottom: 24px; }
+  .vehicle-list { gap: 12px; }
+  .vehicle-list li { grid-template-columns: 1fr 102px; min-height: 58px; }
+  .vehicle-name { font-size: 20px; }
+  .vehicle-icon { width: 92px; }
+  .parking-card__note { font-size: 10px; }
+  .contact-sign { width: 94%; margin-top: 12px; border-width: 3px; border-radius: 19px; }
+  .contact-sign a { font-size: 24px; grid-template-columns: 26px 1fr; }
+  .contact-sign small { font-size: 16px; }
+  .hero-brandline { width: calc(100% - 28px); font-size: 36px; }
+
+  .intro-grid { gap: 38px; }
+  .intro h2,
+  .amenities h2,
+  .fleet h2,
+  .location h2 { font-size: clamp(45px, 13vw, 62px); }
+  .intro-copy .lead { font-size: 19px; }
+  .section-heading { margin-bottom: 36px; }
   .amenities-grid { grid-template-columns: 1fr; }
-  .amenity-card { min-height: 305px; }
-  .amenity-icon { margin-top: 34px; }
-  .fleet-visual { min-height: 360px; }
-  .fleet-sign { width: 140px; top: 24px; right: 20px; padding: 15px; }
-  .fleet-sign strong { font-size: 1rem; }
-  .fleet-sign::before { height: 130px; }
-  .fleet-truck { left: 2%; bottom: 12%; width: 95%; transform: scale(.86); transform-origin: left bottom; }
-  .fleet-trailer::after { font-size: .5rem; }
-  .location-data { grid-template-columns: 1fr; }
-  .location-actions { align-items: stretch; flex-direction: column; }
-  .location-actions .button { width: 100%; }
-  .location-card { min-height: 350px; }
-  .location-card__label { left: 18px; bottom: 18px; width: calc(100% - 36px); }
-  .location-card__truck { right: 18px; top: 18px; }
-  .final-cta { padding: 68px 0; }
-  .final-cta h2 { font-size: clamp(2.4rem, 11.5vw, 3.6rem); }
-  .final-cta__action, .final-cta__action .button { width: 100%; }
-  .footer-grid { grid-template-columns: 1fr; gap: 28px; }
-  .footer-links { grid-column: auto; flex-direction: column; gap: 12px; }
-  .footer-bottom { align-items: flex-start; flex-direction: column; gap: 12px; }
-  .whatsapp-float { width: 54px; height: 54px; padding: 0; justify-content: center; }
-  .whatsapp-float span { display: none; }
+  .amenity-card { min-height: 325px; }
+  .amenity-pictogram { margin-bottom: 30px; }
+
+  .fleet-grid { gap: 44px; }
+  .fleet-panel { min-height: 380px; padding: 25px; }
+  .fleet-panel > strong { font-size: 92px; top: 60px; left: 18px; }
+  .fleet-lanes { left: 110px; }
+  .fleet-truck { width: 205px; bottom: 145px; right: 15px; }
+  .fleet-truck span { width: 132px; height: 50px; }
+  .fleet-truck b { width: 70px; height: 40px; }
+  .fleet-copy .button { width: 100%; }
+
+  .location-contact { grid-template-columns: 1fr; }
+  .location-contact strong { font-size: 22px; }
+  .route-card { min-height: 360px; padding: 28px; }
+  .route-card__pin { right: 40px; width: 76px; height: 76px; }
+  .route-card > strong { left: 28px; bottom: 90px; font-size: 31px; }
+  .route-card > p { left: 28px; bottom: 62px; }
+  .route-card > a { right: 28px; bottom: 26px; }
+
+  .final-cta { padding-top: 68px; }
+  .final-cta__grid { display: block; }
+  .final-cta__hotel {
+    writing-mode: horizontal-tb;
+    transform: none;
+    border-left: 0;
+    border-bottom: 2px solid rgba(255,255,255,.22);
+    padding: 0 0 16px;
+    margin-bottom: 34px;
+    font-size: 65px;
+  }
+  .final-cta h2 { font-size: clamp(50px, 14vw, 70px); }
+  .final-cta__actions { display: grid; gap: 18px; }
+  .final-cta__actions .button { width: 100%; }
+  .final-phone { font-size: 25px; }
+  .final-cta__brand { width: calc(100% - 28px); margin-top: 52px; font-size: 48px; }
+
+  .footer-grid { grid-template-columns: 1fr; gap: 16px; }
+  .admin-link { justify-self: start; }
+  .footer-year { grid-column: auto; }
+  .whatsapp-float { right: 12px; bottom: 12px; min-height: 48px; padding-inline: 14px; }
 }
+
 @media (max-width: 390px) {
-  .brand-copy small { display: none; }
-  .hero h1 { font-size: 2.62rem; }
-  .eyebrow { font-size: .55rem; }
-  .hero-visual { min-height: 360px; }
-  .floating-note { display: none; }
+  .brand-name { font-size: 21px; }
+  .hotel-rail span { font-size: 44px; }
+  .hero h1 { font-size: 49px; }
+  .vehicle-list li { grid-template-columns: 1fr 86px; }
+  .vehicle-name { font-size: 18px; }
+  .vehicle-icon { width: 82px; }
+  .contact-sign a { font-size: 21px; }
+  .contact-sign small { font-size: 14px; }
+  .whatsapp-float b { display: none; }
+  .whatsapp-float { width: 50px; padding: 0; justify-content: center; border-radius: 50%; }
 }
