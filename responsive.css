@@ -1,169 +1,105 @@
-@media (max-width: 1040px) {
-  .desktop-nav,
-  .header-cta { display: none; }
+@media (max-width: 1120px) {
+  .header-shell { gap: 18px; }
+  .desktop-nav { gap: 18px; }
+  .desktop-nav a { font-size: 13px; }
+  .header-cta { padding: 0 15px; }
+  .brand-name { font-size: 32px; }
+  .brand-sub i { width: 35px; }
+  .quick-benefit { gap: 12px; padding-inline: 14px; }
+  .quick-icon { width: 42px; }
+  .quick-benefit p { font-size: 14px; }
+  .parking-owned { padding-inline: 32px; }
+  .room-cta-inner { padding-inline: 34px; }
+}
 
-  .header-inner { min-height: 82px; }
-  .menu-toggle { display: flex; margin-left: auto; }
+@media (max-width: 980px) {
+  html { scroll-padding-top: 82px; }
+  .header-shell { min-height: 82px; }
+  .desktop-nav, .header-cta { display: none; }
+  .menu-toggle { display: flex; }
+  .brand { align-items: flex-start; }
+  .brand-name { font-size: 30px; }
+  .brand-sub { font-size: 12px; margin-top: 7px; }
 
-  .hero { padding: 72px 0; }
-  .hero-grid {
-    grid-template-columns: 1fr;
-    gap: 46px;
-  }
+  .hero, .hero-content { min-height: 525px; }
+  .hero-photo { inset: 0 0 0 36%; }
+  .hero-shade { background: linear-gradient(90deg, rgba(5,22,76,1) 0%, rgba(5,22,76,.96) 42%, rgba(5,22,76,.48) 76%, rgba(5,22,76,.14) 100%); }
+  .hero-copy { width: 68%; }
+  .hero h1 span, .hero h1 strong { font-size: clamp(52px, 8vw, 72px); }
 
-  .parking-card { max-width: 560px; }
-
-  .facts-grid { grid-template-columns: repeat(2, 1fr); }
-  .fact:nth-child(2) { border-right: 1px solid var(--line); }
-  .fact:nth-child(3),
-  .fact:nth-child(4) { border-top: 1px solid var(--line); }
-
-  .split-section,
-  .parking-layout,
-  .contact-grid {
-    grid-template-columns: 1fr;
-    gap: 50px;
-  }
+  .quick-benefits { margin-top: 0; padding: 14px 0; }
+  .quick-benefits-grid { grid-template-columns: repeat(2, 1fr); }
+  .quick-benefit:nth-child(2)::after { display: none; }
+  .quick-benefit:nth-child(-n+2) { border-bottom: 1px solid rgba(255,255,255,.2); }
 
   .feature-grid { grid-template-columns: repeat(2, 1fr); }
-  .simple-sign { max-width: 600px; }
-
-  .footer-inner { grid-template-columns: 1fr auto; }
-  .footer-inner > small { grid-column: 1 / -1; }
+  .feature-card { padding: 20px 30px; }
+  .feature-card:nth-child(2) { border-right: 0; }
+  .feature-card:nth-child(-n+2) { border-bottom: 1px solid #d7dae2; }
+  .white-panel { padding-inline: 28px; }
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+  .parking-owned { grid-template-columns: 1fr; gap: 16px; }
+  .parking-owned ul { border-left: 0; border-top: 1px solid rgba(255,255,255,.22); padding: 12px 0 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .room-cta-inner { align-items: stretch; flex-direction: column; }
+  .button-large { min-width: 0; }
+  .footer-grid { grid-template-columns: 1.2fr 1fr 1fr; }
+  .footer-column:last-child { grid-column: 2 / 4; }
 }
 
 @media (max-width: 720px) {
-  .container { width: min(100% - 32px, 1160px); }
+  .content-width, .header-shell { width: min(100% - 28px, 1180px); }
+  .hero { min-height: auto; }
+  .hero-photo { inset: 0; background-position: 62% center; }
+  .hero-shade { background: linear-gradient(90deg, rgba(5,22,76,.98) 0%, rgba(5,22,76,.9) 63%, rgba(5,22,76,.56) 100%); }
+  .hero-content { min-height: 585px; align-items: flex-end; }
+  .hero-copy { width: 100%; padding: 45px 0 56px; }
+  .hero-kicker { font-size: 14px; }
+  .hero h1 span, .hero h1 strong { font-size: clamp(48px, 15vw, 67px); }
+  .hero-type { font-size: 21px; }
+  .hero-text { font-size: 15px; max-width: 430px; }
+  .hero-actions { gap: 10px; }
+  .button { flex: 1; padding-inline: 16px; font-size: 14px; }
 
-  .header-inner { min-height: 76px; }
-  .brand { min-width: 0; }
-  .brand-kicker { font-size: 11px; margin-bottom: 5px; }
-  .brand strong { font-size: 26px; }
-  .menu-toggle { width: 44px; height: 44px; }
+  .quick-benefits-grid { grid-template-columns: 1fr; }
+  .quick-benefit { justify-content: flex-start; min-height: 72px; padding-inline: 28px; }
+  .quick-benefit::after { display: none !important; }
+  .quick-benefit:not(:last-child) { border-bottom: 1px solid rgba(255,255,255,.18); }
+  .quick-benefit:nth-child(-n+2) { border-bottom: 1px solid rgba(255,255,255,.18); }
 
-  .hero { padding: 54px 0 52px; }
-  .hero-grid { gap: 34px; }
-  .hero h1 { font-size: clamp(46px, 15vw, 64px); max-width: 100%; }
-  .hero-lead { margin-top: 22px; font-size: 15px; }
-  .hero-actions { margin-top: 26px; flex-direction: column; }
-  .hero-actions .button { width: 100%; }
+  .white-panel { padding: 17px 18px 8px; }
+  .section-title p { font-size: 27px; }
+  .feature-grid { grid-template-columns: 1fr; }
+  .feature-card { border-right: 0 !important; border-bottom: 1px solid #d7dae2; padding: 20px 18px; }
+  .feature-card:last-child { border-bottom: 0; }
+  .feature-card h2 { font-size: 23px; }
 
-  .parking-card {
-    width: 100%;
-    padding: 24px;
-    grid-template-columns: 66px minmax(0, 1fr);
-    gap: 18px;
-    border-radius: 16px;
-  }
-  .parking-sign {
-    width: 66px;
-    border-width: 8px;
-    font-size: 46px;
-  }
-  .parking-content h2 { font-size: 34px; }
-  .parking-content li { font-size: 21px; }
-  .parking-content > a { overflow-wrap: anywhere; }
-
-  .facts-grid { grid-template-columns: 1fr 1fr; }
-  .fact { padding: 20px 16px; }
-  .fact strong { font-size: 23px; }
-  .fact span { font-size: 11px; }
-
-  .section { padding: 72px 0; }
-  .split-section,
-  .parking-layout,
-  .contact-grid { gap: 36px; }
-
-  .section-heading { padding-left: 0; padding-top: 68px; }
-  .section-number { top: 0; }
-  .section h2 { font-size: clamp(40px, 12vw, 54px); }
-  .section-copy .lead { font-size: 18px; }
-  .mini-contact { flex-direction: column; gap: 8px; }
-
-  .center-heading { margin-bottom: 34px; text-align: left; }
-  .feature-grid { grid-template-columns: 1fr; gap: 12px; }
-  .feature-card { min-height: 0; padding: 24px; }
-  .feature-card h3 { margin-top: 28px; font-size: 30px; }
-
-  .vehicle-list > div {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 4px;
-  }
-  .vehicle-list strong { font-size: 29px; }
-
-  .simple-sign {
-    padding: 26px;
-    gap: 20px;
-    border-radius: 16px;
-  }
-  .simple-sign__e {
-    width: 78px;
-    height: 78px;
-    border-width: 9px;
-    font-size: 52px;
-  }
-  .simple-sign small { font-size: 14px; }
-  .simple-sign strong { font-size: 38px; }
-
-  .contact-row {
-    grid-template-columns: 1fr;
-    gap: 5px;
-    padding: 18px 20px;
-  }
-  .contact-row a,
-  .contact-row strong { overflow-wrap: anywhere; }
-  .contact-actions {
-    align-items: stretch;
-    flex-direction: column;
-    gap: 14px;
-    padding: 20px;
-  }
-  .contact-actions .button { width: 100%; }
-  .map-link { text-align: center; padding: 6px; }
-
-  .final-cta { padding: 48px 0; }
-  .final-cta__inner {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 28px;
-  }
-  .final-cta__inner .button { width: 100%; }
-
-  .footer-inner { grid-template-columns: 1fr; gap: 18px; }
-  .footer-inner > small { grid-column: auto; }
-  .footer-links { flex-wrap: wrap; gap: 10px 18px; }
-
-  .whatsapp-float {
-    right: 16px;
-    bottom: 16px;
-    width: 52px;
-    height: 52px;
-  }
+  .section-heading-dark h2 { font-size: 28px; }
+  .gallery-grid { grid-template-columns: 1fr 1fr; gap: 7px; }
+  .parking-owned { padding: 18px 20px; }
+  .parking-owned-main { align-items: flex-start; }
+  .parking-owned h3 { font-size: 22px; }
+  .parking-owned ul { grid-template-columns: 1fr; gap: 0; }
+  .room-cta-inner { padding: 22px 20px; }
+  .room-copy { align-items: flex-start; }
+  .round-whatsapp { width: 54px; height: 54px; flex: 0 0 auto; }
+  .room-copy h2 { font-size: 25px; }
+  .location-grid { align-items: flex-start; flex-direction: column; }
+  .location-grid .button { flex: 0 0 auto; }
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px 24px; }
+  .footer-column:last-child { grid-column: auto; }
 }
 
-@media (max-width: 420px) {
-  .container { width: min(100% - 24px, 1160px); }
-  .brand strong { font-size: 23px; }
-  .menu-toggle { width: 42px; height: 42px; }
-
-  .hero h1 { font-size: 44px; }
-  .eyebrow { font-size: 11px; letter-spacing: .2em; }
-
-  .parking-card {
-    grid-template-columns: 1fr;
-    padding: 22px;
-  }
-  .parking-sign { width: 62px; }
-
-  .facts-grid { grid-template-columns: 1fr; }
-  .fact,
-  .fact:first-child,
-  .fact:nth-child(2) { border-left: 0; border-right: 0; border-top: 1px solid var(--line); }
-  .fact:first-child { border-top: 0; }
-
-  .simple-sign {
-    align-items: flex-start;
-    flex-direction: column;
-  }
+@media (max-width: 470px) {
+  .brand-name { font-size: 27px; }
+  .brand-sub i { width: 28px; }
+  .hero-content { min-height: 610px; }
+  .hero-actions { flex-direction: column; }
+  .button { width: 100%; }
+  .gallery-grid { grid-template-columns: 1fr; }
+  .gallery-grid figure { aspect-ratio: 1.65/1; }
+  .parking-owned-main { flex-direction: column; }
+  .room-copy { flex-direction: column; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .footer-column:last-child { grid-column: auto; }
+  .whatsapp-float { width: 52px; height: 52px; right: 14px; bottom: 14px; }
 }

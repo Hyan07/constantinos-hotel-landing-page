@@ -1,46 +1,53 @@
-'use strict';
+(() => {
+  const menuButton = document.querySelector('.menu-toggle');
+  const mobileNav = document.getElementById('mobile-nav');
+  const mobileLinks = mobileNav ? [...mobileNav.querySelectorAll('a')] : [];
+  const desktopLinks = [...document.querySelectorAll('.desktop-nav a')];
 
-const WHATSAPP_NUMBER = '5535988448287';
-const WHATSAPP_MESSAGE = "Olá! Vi o site do Constantino's Hotel e gostaria de consultar disponibilidade de quarto e estacionamento.";
-const SYSTEM_URL = 'https://gestao.constantinoshotel.com.br/';
+  function closeMenu() {
+    if (!menuButton || !mobileNav) return;
+    menuButton.setAttribute('aria-expanded', 'false');
+    menuButton.setAttribute('aria-label', 'Abrir menu');
+    mobileNav.hidden = true;
+    document.body.classList.remove('menu-open');
+  }
 
-const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
+  if (menuButton && mobileNav) {
+    menuButton.addEventListener('click', () => {
+      const isOpen = menuButton.getAttribute('aria-expanded') === 'true';
+      menuButton.setAttribute('aria-expanded', String(!isOpen));
+      menuButton.setAttribute('aria-label', isOpen ? 'Abrir menu' : 'Fechar menu');
+      mobileNav.hidden = isOpen;
+      document.body.classList.toggle('menu-open', !isOpen);
+    });
 
-document.querySelectorAll('[data-whatsapp]').forEach((link) => {
-  link.href = whatsappUrl;
-});
+    mobileLinks.forEach(link => link.addEventListener('click', closeMenu));
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 980) closeMenu();
+    });
+  }
 
-const adminLink = document.querySelector('a[href="https://gestao.constantinoshotel.com.br/"]');
-if (adminLink) adminLink.href = SYSTEM_URL;
-
-const menuToggle = document.querySelector('.menu-toggle');
-const mobileNav = document.getElementById('mobile-nav');
-
-function closeMenu() {
-  if (!menuToggle || !mobileNav) return;
-  menuToggle.setAttribute('aria-expanded', 'false');
-  menuToggle.setAttribute('aria-label', 'Abrir menu');
-  mobileNav.hidden = true;
-  document.body.classList.remove('menu-open');
-}
-
-if (menuToggle && mobileNav) {
-  menuToggle.addEventListener('click', () => {
-    const isOpen = menuToggle.getAttribute('aria-expanded') === 'true';
-    menuToggle.setAttribute('aria-expanded', String(!isOpen));
-    menuToggle.setAttribute('aria-label', isOpen ? 'Abrir menu' : 'Fechar menu');
-    mobileNav.hidden = isOpen;
-    document.body.classList.toggle('menu-open', !isOpen);
+  document.querySelectorAll('.js-whatsapp').forEach(link => {
+    const message = link.dataset.message?.trim();
+    if (!message) return;
+    link.href = `https://wa.me/5535988448287?text=${encodeURIComponent(message)}`;
   });
 
-  mobileNav.querySelectorAll('a').forEach((link) => {
-    link.addEventListener('click', closeMenu);
-  });
+  const sections = [...document.querySelectorAll('main section[id]')];
+  if ('IntersectionObserver' in window && sections.length) {
+    const observer = new IntersectionObserver(entries => {
+      const visible = entries
+        .filter(entry => entry.isIntersecting)
+        .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
 
-  window.addEventListener('resize', () => {
-    if (window.innerWidth > 1040) closeMenu();
-  }, { passive: true });
-}
+      if (!visible) return;
+      const id = `#${visible.target.id}`;
+      desktopLinks.forEach(link => link.classList.toggle('is-active', link.getAttribute('href') === id));
+    }, { rootMargin: '-35% 0px -55% 0px', threshold: [0, .2, .5] });
 
-const year = document.getElementById('year');
-if (year) year.textContent = String(new Date().getFullYear());
+    sections.forEach(section => observer.observe(section));
+  }
+
+  const year = document.getElementById('year');
+  if (year) year.textContent = new Date().getFullYear();
+})();
