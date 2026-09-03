@@ -3,7 +3,7 @@
   position: absolute;
   inset: 0;
   z-index: -3;
-  background-image: url('https://dynamic-media-cdn.tripadvisor.com/media/photo-o/10/df/a7/d4/constantino-hotel.jpg?h=1200&s=1&w=1200');
+  background-image: url('assets/hero-building.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 72% center;
