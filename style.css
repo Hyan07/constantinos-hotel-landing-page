@@ -205,19 +205,19 @@ button, a { -webkit-tap-highlight-color: transparent; }
   position: absolute;
   inset: 0;
   z-index: -3;
+  background-color: var(--navy-deep);
   background-image: url('assets/fachada-constantinos-v3.webp');
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 72% center;
-  transform: scale(1.015);
+  background-size: auto 118%;
+  background-position: right center;
 }
 .hero-overlay {
   position: absolute;
   inset: 0;
   z-index: -2;
   background:
-    linear-gradient(90deg, rgba(4, 18, 66, .97) 0%, rgba(4, 18, 66, .93) 32%, rgba(4, 18, 66, .68) 52%, rgba(4, 18, 66, .14) 79%, rgba(4, 18, 66, .06) 100%),
-    linear-gradient(0deg, rgba(2, 13, 48, .34), rgba(2, 13, 48, .03) 58%);
+    linear-gradient(90deg, rgba(4, 18, 66, 1) 0%, rgba(4, 18, 66, .98) 30%, rgba(4, 18, 66, .91) 40%, rgba(4, 18, 66, .62) 52%, rgba(4, 18, 66, .22) 66%, rgba(4, 18, 66, .05) 82%),
+    linear-gradient(0deg, rgba(2, 13, 48, .38), rgba(2, 13, 48, .02) 58%);
 }
 .hero::after {
   content: "";

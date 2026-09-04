@@ -1,21 +1,21 @@
-/* Compatibilidade com o HTML atual + reforço visual do layout de referência */
+/* Compatibilidade com o HTML atual + composição responsiva da foto principal */
 .hero-photo {
   position: absolute;
   inset: 0;
   z-index: -3;
+  background-color: var(--navy-deep);
   background-image: url('assets/fachada-constantinos-v3.webp');
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 72% center;
-  transform: scale(1.015);
+  background-size: auto 118%;
+  background-position: right center;
 }
 .hero-shade {
   position: absolute;
   inset: 0;
   z-index: -2;
   background:
-    linear-gradient(90deg, rgba(4,18,66,.97) 0%, rgba(4,18,66,.93) 32%, rgba(4,18,66,.68) 52%, rgba(4,18,66,.14) 79%, rgba(4,18,66,.06) 100%),
-    linear-gradient(0deg, rgba(2,13,48,.34), rgba(2,13,48,.03) 58%);
+    linear-gradient(90deg, rgba(4,18,66,1) 0%, rgba(4,18,66,.98) 30%, rgba(4,18,66,.91) 40%, rgba(4,18,66,.62) 52%, rgba(4,18,66,.22) 66%, rgba(4,18,66,.05) 82%),
+    linear-gradient(0deg, rgba(2,13,48,.38), rgba(2,13,48,.02) 58%);
 }
 .section-title p {
   margin: 0 0 17px;
@@ -64,14 +64,17 @@
   .brand-sub { margin-top: 7px; font-size: 12px; }
 
   .hero,
-  .hero-content { min-height: 550px; }
+  .hero-content { min-height: 560px; }
   .hero-media,
-  .hero-photo { background-position: 68% center; }
+  .hero-photo {
+    background-size: auto 108%;
+    background-position: 88% center;
+  }
   .hero-overlay,
   .hero-shade {
     background:
-      linear-gradient(90deg, rgba(4,18,66,.98) 0%, rgba(4,18,66,.94) 42%, rgba(4,18,66,.56) 70%, rgba(4,18,66,.18) 100%),
-      linear-gradient(0deg, rgba(2,13,48,.32), rgba(2,13,48,.03));
+      linear-gradient(90deg, rgba(4,18,66,.99) 0%, rgba(4,18,66,.96) 37%, rgba(4,18,66,.76) 54%, rgba(4,18,66,.34) 72%, rgba(4,18,66,.10) 100%),
+      linear-gradient(0deg, rgba(2,13,48,.38), rgba(2,13,48,.02) 62%);
   }
   .hero-copy { width: 70%; }
   .hero h1 span,
@@ -113,14 +116,17 @@
 
   .hero { min-height: auto; }
   .hero-media,
-  .hero-photo { background-position: 67% center; }
+  .hero-photo {
+    background-size: cover;
+    background-position: 57% center;
+  }
   .hero-overlay,
   .hero-shade {
     background:
-      linear-gradient(90deg, rgba(4,18,66,.98) 0%, rgba(4,18,66,.91) 60%, rgba(4,18,66,.54) 100%),
-      linear-gradient(0deg, rgba(2,13,48,.48), rgba(2,13,48,.04) 60%);
+      linear-gradient(0deg, rgba(4,18,66,.99) 0%, rgba(4,18,66,.96) 38%, rgba(4,18,66,.72) 58%, rgba(4,18,66,.28) 78%, rgba(4,18,66,.08) 100%),
+      linear-gradient(90deg, rgba(4,18,66,.72) 0%, rgba(4,18,66,.32) 62%, rgba(4,18,66,.08) 100%);
   }
-  .hero-content { min-height: 610px; align-items: flex-end; }
+  .hero-content { min-height: 630px; align-items: flex-end; }
   .hero-copy { width: 100%; padding: 72px 0 62px; }
   .hero-kicker { min-height: 31px; margin-bottom: 15px; font-size: 14px; }
   .hero h1 span,
@@ -192,7 +198,9 @@
   .brand-sub i { width: 27px; }
   .menu-toggle { width: 44px; height: 44px; }
 
-  .hero-content { min-height: 620px; }
+  .hero-media,
+  .hero-photo { background-position: 59% center; }
+  .hero-content { min-height: 650px; }
   .hero-copy { padding-bottom: 48px; }
   .hero-kicker { max-width: 100%; }
   .hero h1 span,
