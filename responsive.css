@@ -8,6 +8,8 @@
   background-repeat: no-repeat;
   background-size: auto 118%;
   background-position: right center;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, transparent 47%, rgba(0,0,0,.12) 51%, rgba(0,0,0,.38) 56%, rgba(0,0,0,.68) 61%, #000 69%);
+  mask-image: linear-gradient(90deg, transparent 0%, transparent 47%, rgba(0,0,0,.12) 51%, rgba(0,0,0,.38) 56%, rgba(0,0,0,.68) 61%, #000 69%);
 }
 .hero-shade {
   position: absolute;
@@ -69,6 +71,8 @@
   .hero-photo {
     background-size: auto 108%;
     background-position: 88% center;
+    -webkit-mask-image: linear-gradient(90deg, transparent 0%, transparent 40%, rgba(0,0,0,.16) 46%, rgba(0,0,0,.48) 53%, rgba(0,0,0,.76) 60%, #000 69%);
+    mask-image: linear-gradient(90deg, transparent 0%, transparent 40%, rgba(0,0,0,.16) 46%, rgba(0,0,0,.48) 53%, rgba(0,0,0,.76) 60%, #000 69%);
   }
   .hero-overlay,
   .hero-shade {
@@ -119,6 +123,8 @@
   .hero-photo {
     background-size: cover;
     background-position: 57% center;
+    -webkit-mask-image: none;
+    mask-image: none;
   }
   .hero-overlay,
   .hero-shade {
