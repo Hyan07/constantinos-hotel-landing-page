@@ -7,7 +7,7 @@
   background-image: url('assets/fachada-constantinos-v3.webp');
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: 74% center;
+  background-position: 70% center;
 }
 
 .hero-shade {
@@ -18,15 +18,14 @@
     linear-gradient(
       90deg,
       rgba(4,18,66,1) 0%,
-      rgba(4,18,66,.995) 27%,
-      rgba(4,18,66,.97) 36%,
-      rgba(4,18,66,.91) 44%,
-      rgba(4,18,66,.80) 51%,
-      rgba(4,18,66,.64) 58%,
-      rgba(4,18,66,.46) 65%,
-      rgba(4,18,66,.29) 72%,
-      rgba(4,18,66,.16) 80%,
-      rgba(4,18,66,.08) 89%,
+      rgba(4,18,66,.995) 24%,
+      rgba(4,18,66,.97) 34%,
+      rgba(4,18,66,.90) 43%,
+      rgba(4,18,66,.78) 51%,
+      rgba(4,18,66,.60) 59%,
+      rgba(4,18,66,.40) 68%,
+      rgba(4,18,66,.22) 78%,
+      rgba(4,18,66,.10) 89%,
       rgba(4,18,66,.03) 100%
     ),
     linear-gradient(0deg, rgba(2,13,48,.34), rgba(2,13,48,.02) 58%);
@@ -83,7 +82,7 @@
   .hero-media,
   .hero-photo {
     background-size: cover;
-    background-position: 72% center;
+    background-position: 69% center;
   }
   .hero-overlay,
   .hero-shade {
@@ -91,12 +90,12 @@
       linear-gradient(
         90deg,
         rgba(4,18,66,.995) 0%,
-        rgba(4,18,66,.97) 33%,
-        rgba(4,18,66,.90) 44%,
-        rgba(4,18,66,.72) 56%,
-        rgba(4,18,66,.48) 68%,
-        rgba(4,18,66,.25) 80%,
-        rgba(4,18,66,.09) 91%,
+        rgba(4,18,66,.97) 31%,
+        rgba(4,18,66,.90) 42%,
+        rgba(4,18,66,.74) 54%,
+        rgba(4,18,66,.50) 67%,
+        rgba(4,18,66,.26) 80%,
+        rgba(4,18,66,.10) 91%,
         rgba(4,18,66,.03) 100%
       ),
       linear-gradient(0deg, rgba(2,13,48,.38), rgba(2,13,48,.02) 62%);
@@ -143,7 +142,7 @@
   .hero-media,
   .hero-photo {
     background-size: cover;
-    background-position: 62% center;
+    background-position: 60% center;
   }
   .hero-overlay,
   .hero-shade {
@@ -224,7 +223,7 @@
   .menu-toggle { width: 44px; height: 44px; }
 
   .hero-media,
-  .hero-photo { background-position: 62% center; }
+  .hero-photo { background-position: 60% center; }
   .hero-content { min-height: 650px; }
   .hero-copy { padding-bottom: 48px; }
   .hero-kicker { max-width: 100%; }
