@@ -1,6 +1,7 @@
 'use strict';
 
-const WHATSAPP_NUMBER = '5535988448287';
+const WHATSAPP_NUMBER = '5535999343021';
+const WHATSAPP_DISPLAY = '(35) 99934-3021';
 const DEFAULT_MESSAGE = "Olá! Gostaria de informações sobre o Constantino's Hotel.";
 // Troque para true quando quiser publicar novamente as fotos do estacionamento.
 const SITE_CONFIG = Object.freeze({ showParkingGallery: false });
@@ -19,6 +20,9 @@ function whatsappUrl(message = DEFAULT_MESSAGE) {
 
 document.querySelectorAll('.js-whatsapp').forEach((link) => {
   link.href = whatsappUrl(link.dataset.message || DEFAULT_MESSAGE);
+  link.querySelectorAll('span').forEach((span) => {
+    if (span.textContent.trim() === '(35) 98844-8287') span.textContent = WHATSAPP_DISPLAY;
+  });
 });
 
 const year = document.getElementById('year');
