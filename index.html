@@ -3,242 +3,195 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Constantino's Hotel em Passos - MG. Hospedagem com estacionamento próprio e amplo para carros, caminhões e ônibus.">
-  <meta name="theme-color" content="#061a5a">
-  <meta property="og:title" content="Constantino's Hotel | Passos - MG">
-  <meta property="og:description" content="Estacionamento próprio para carros, caminhões e ônibus. Consulte disponibilidade pelo WhatsApp.">
+  <meta name="description" content="Constantino's Hotel em Passos - MG. Hospedagem prática, atendimento direto e estacionamento próprio para carros, caminhões e ônibus.">
+  <meta name="theme-color" content="#06194f">
+  <meta property="og:title" content="Constantino's Hotel | Sua parada tranquila em Passos - MG">
+  <meta property="og:description" content="Descanse com tranquilidade e deixe seu veículo em nosso amplo estacionamento próprio. Consulte a disponibilidade pelo WhatsApp.">
   <meta property="og:type" content="website">
-  <title>Constantino's Hotel | Passos - MG</title>
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:image" content="assets/fachada-constantinos-v3.webp">
+  <title>Constantino's Hotel | Hospedagem em Passos - MG</title>
 
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="preload" as="image" href="assets/fachada-constantinos-v3.webp" type="image/webp">
-  <link rel="stylesheet" href="style.css?v=20260904-1">
-  <link rel="stylesheet" href="responsive.css?v=20260906-5">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="responsive.css">
+  <script>document.documentElement.classList.add('js');</script>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Hotel",
+      "name": "Constantino's Hotel",
+      "description": "Hotel em Passos - MG com estacionamento próprio para carros, caminhões e ônibus.",
+      "telephone": "+55 35 3521-5708",
+      "address": {"@type": "PostalAddress", "streetAddress": "Av. Juca Stockler, 1495", "addressLocality": "Passos", "addressRegion": "MG", "addressCountry": "BR"},
+      "image": "assets/fachada-constantinos-v3.webp"
+    }
+  </script>
 </head>
 <body>
   <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
 
   <header class="site-header" id="topo">
     <div class="header-shell">
-      <a class="brand" href="#inicio" aria-label="Constantino's Hotel - Início">
+      <a class="brand" href="#inicio" aria-label="Constantino's Hotel — início">
         <span class="brand-name">CONSTANTINO'S</span>
         <span class="brand-sub"><i></i> HOTEL <i></i></span>
       </a>
-
       <nav class="desktop-nav" aria-label="Navegação principal">
-        <a class="is-active" href="#inicio">Início</a>
-        <a href="#quartos">Quartos</a>
-        <a href="#estrutura">Estrutura</a>
-        <a href="#estacionamento">Estacionamento</a>
-        <a href="#localizacao">Localização</a>
-        <a href="#contato">Contato</a>
+        <a class="is-active" href="#inicio">Início</a><a href="#hotel">O hotel</a><a href="#hospedagem">Hospedagem</a><a href="#estacionamento">Estacionamento</a><a href="#localizacao">Localização</a><a href="#contato">Contato</a>
       </nav>
-
-      <a class="header-cta js-whatsapp" data-message="Olá! Gostaria de reservar um quarto no Constantino's Hotel." href="https://wa.me/5535988448287" target="_blank" rel="noopener">
-        <span class="wa-icon" aria-hidden="true">◉</span> Reservar agora
+      <a class="header-cta js-whatsapp" data-message="Olá! Gostaria de consultar a disponibilidade no Constantino's Hotel." href="https://wa.me/5535988448287" target="_blank" rel="noopener">
+        <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M20 11.5a8 8 0 0 1-11.7 7.1L4 20l1.4-4.2A8 8 0 1 1 20 11.5Z"/><path d="M9 8.5c.3 2.8 1.8 4.3 4.7 4.9l1-1.1 1.8.9c.2.1.3.3.2.6-.3 1.1-1.1 1.7-2.2 1.7-3.8-.1-7.8-4-7.9-7.8 0-1.1.6-1.9 1.7-2.2.3-.1.5 0 .6.2l.9 1.8Z"/></svg>Reservar agora
       </a>
-
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Abrir menu">
-        <span></span><span></span><span></span>
-      </button>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Abrir menu"><span></span><span></span><span></span></button>
     </div>
-
     <nav class="mobile-nav" id="mobile-nav" aria-label="Navegação móvel" hidden>
-      <a href="#inicio">Início</a>
-      <a href="#quartos">Quartos</a>
-      <a href="#estrutura">Estrutura</a>
-      <a href="#estacionamento">Estacionamento</a>
-      <a href="#localizacao">Localização</a>
-      <a href="#contato">Contato</a>
-      <a class="mobile-nav-cta js-whatsapp" data-message="Olá! Gostaria de reservar um quarto no Constantino's Hotel." href="https://wa.me/5535988448287" target="_blank" rel="noopener">Reservar pelo WhatsApp</a>
+      <a href="#inicio">Início</a><a href="#hotel">O hotel</a><a href="#hospedagem">Hospedagem</a><a href="#estacionamento">Estacionamento</a><a href="#localizacao">Localização</a><a href="#contato">Contato</a>
+      <a class="mobile-nav-cta js-whatsapp" data-message="Olá! Gostaria de consultar a disponibilidade no Constantino's Hotel." href="https://wa.me/5535988448287" target="_blank" rel="noopener">Reservar pelo WhatsApp</a>
     </nav>
   </header>
 
   <main id="conteudo">
-    <section class="hero" id="inicio">
-      <div class="hero-photo" aria-hidden="true"></div>
-      <div class="hero-shade" aria-hidden="true"></div>
+    <section class="hero" id="inicio" data-nav-section>
+      <div class="hero-photo" aria-hidden="true"></div><div class="hero-shade" aria-hidden="true"></div>
       <div class="content-width hero-content">
-        <div class="hero-copy">
-          <span class="hero-kicker">O NOSSO GRANDE DIFERENCIAL</span>
-          <h1><span>ESTACIONAMENTO</span><strong>AMPLO E SEGURO</strong></h1>
-          <p class="hero-type">PARA CARROS, CAMINHÕES E ÔNIBUS</p>
-          <p class="hero-text">Aqui o seu veículo fica bem guardado enquanto você descansa com tranquilidade.</p>
+        <div class="hero-copy reveal">
+          <span class="eyebrow eyebrow-light"><i></i> Hospedagem em Passos • MG</span>
+          <h1>Sua parada <strong>tranquila</strong> começa aqui.</h1>
+          <p>Descanse com praticidade, atendimento direto e a segurança de deixar seu veículo em um estacionamento próprio e espaçoso.</p>
           <div class="hero-actions">
-            <a class="button button-yellow js-whatsapp" data-message="Olá! Gostaria de consultar disponibilidade e estacionamento no Constantino's Hotel." href="https://wa.me/5535988448287" target="_blank" rel="noopener">Falar no WhatsApp</a>
-            <a class="button button-outline" href="#estrutura">Conhecer o hotel</a>
+            <a class="button button-yellow js-whatsapp" data-message="Olá! Gostaria de consultar a disponibilidade no Constantino's Hotel." href="https://wa.me/5535988448287" target="_blank" rel="noopener">Consultar disponibilidade <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <a class="button button-ghost" href="tel:+553535215708"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M8.5 3H5.8A2.8 2.8 0 0 0 3 5.8C3 14.2 9.8 21 18.2 21a2.8 2.8 0 0 0 2.8-2.8v-2.7l-4-1-1.3 2.4a13.6 13.6 0 0 1-8.6-8.6L9.5 7Z"/></svg>(35) 3521-5708</a>
           </div>
+          <div class="hero-note"><span class="hero-note-icon" aria-hidden="true">E</span><p><strong>Nosso grande diferencial</strong>Estacionamento para carros, caminhões e ônibus.</p></div>
+        </div>
+      </div>
+      <a class="scroll-cue" href="#hotel" aria-label="Conhecer o hotel"><span></span></a>
+    </section>
+
+    <section class="benefit-strip" aria-label="Diferenciais do hotel">
+      <div class="content-width benefit-grid">
+        <article><svg aria-hidden="true" viewBox="0 0 48 48"><path d="M7 17h22v18H7zM29 23h7l6 7v5H29z"/><circle cx="16" cy="37" r="4"/><circle cx="35" cy="37" r="4"/></svg><div><strong>Estacionamento amplo</strong><span>Para veículos de todos os portes</span></div></article>
+        <article><svg aria-hidden="true" viewBox="0 0 48 48"><path d="M24 5 39 11v11c0 10.5-5.9 17.2-15 21-9.1-3.8-15-10.5-15-21V11Z"/><path d="m17 24 5 5 10-11"/></svg><div><strong>Mais tranquilidade</strong><span>Estrutura própria para hóspedes</span></div></article>
+        <article><svg aria-hidden="true" viewBox="0 0 48 48"><path d="M24 43s13-11.5 13-25A13 13 0 0 0 11 18c0 13.5 13 25 13 25Z"/><circle cx="24" cy="18" r="4"/></svg><div><strong>Fácil acesso</strong><span>Na Av. Juca Stockler, em Passos</span></div></article>
+        <article><svg aria-hidden="true" viewBox="0 0 48 48"><path d="M39 23a15 15 0 0 1-22 13.3L9 39l2.7-8A15 15 0 1 1 39 23Z"/><path d="M18 18c.5 5 3.3 7.8 8.5 8.8l1.8-2 3.2 1.6c.4.2.5.6.4 1-.6 2-2 3-4 3-6.9-.2-14-7.2-14.2-14.1 0-2 1-3.4 3-4 .4-.1.8 0 1 .4l1.6 3.2Z"/></svg><div><strong>Atendimento direto</strong><span>Consulte pelo WhatsApp</span></div></article>
+      </div>
+    </section>
+
+    <section class="about section-light" id="hotel" data-nav-section>
+      <div class="content-width about-grid">
+        <div class="about-media reveal"><img src="assets/fachada-constantinos-v3.webp" alt="Fachada azul do Constantino's Hotel em Passos, Minas Gerais" width="900" height="675"><div class="about-seal"><strong>PASSOS</strong><span>Minas Gerais</span></div></div>
+        <div class="about-copy reveal reveal-delay">
+          <span class="eyebrow"><i></i> Bem-vindo ao Constantino's</span>
+          <h2>Uma hospedagem prática para você <em>descansar de verdade.</em></h2>
+          <p>Seja para uma parada durante a viagem, uma visita à cidade ou uma estadia a trabalho, aqui você encontra uma recepção acessível e o essencial para seguir seu caminho com tranquilidade.</p>
+          <div class="about-points">
+            <div><span>01</span><p><strong>Contato sem complicação</strong>Fale diretamente com a recepção e tire suas dúvidas.</p></div>
+            <div><span>02</span><p><strong>Localização conveniente</strong>Chegue com facilidade pela Av. Juca Stockler.</p></div>
+            <div><span>03</span><p><strong>Seu veículo bem acomodado</strong>Espaço próprio, amplo e sem custo adicional.</p></div>
+          </div>
+          <a class="text-link js-whatsapp" data-message="Olá! Gostaria de saber mais sobre o Constantino's Hotel." href="https://wa.me/5535988448287" target="_blank" rel="noopener">Quero saber mais <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         </div>
       </div>
     </section>
 
-    <section class="quick-benefits" aria-label="Principais benefícios">
-      <div class="content-width quick-benefits-grid">
-        <div class="quick-benefit">
-          <span class="quick-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M4 7h10l4 4v6H4z"/><circle cx="8" cy="18" r="2"/><circle cx="17" cy="18" r="2"/><path d="M14 7v4h4"/></svg>
-          </span>
-          <p><strong>Monitoramento</strong><span>24h</span></p>
-        </div>
-        <div class="quick-benefit">
-          <span class="quick-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M3 8h11v8H3z"/><path d="M14 11h4l3 3v2h-7z"/><circle cx="7" cy="18" r="2"/><circle cx="18" cy="18" r="2"/></svg>
-          </span>
-          <p><strong>Espaço amplo para</strong><span>veículos pesados</span></p>
-        </div>
-        <div class="quick-benefit">
-          <span class="quick-icon pin" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M12 22s7-6.2 7-13A7 7 0 0 0 5 9c0 6.8 7 13 7 13z"/><circle cx="12" cy="9" r="2"/></svg>
-          </span>
-          <p><strong>Fácil acesso e</strong><span>manobra</span></p>
-        </div>
-        <div class="quick-benefit">
-          <span class="quick-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/><path d="M12 14v3"/></svg>
-          </span>
-          <p><strong>Segurança e</strong><span>tranquilidade</span></p>
-        </div>
-      </div>
-    </section>
-
-    <section class="feature-section" id="estrutura">
-      <div class="content-width white-panel">
-        <div class="section-title">
-          <p>ESTACIONAMENTO QUE FAZ A DIFERENÇA</p>
-        </div>
-        <div class="feature-grid">
-          <article class="feature-card">
-            <div class="feature-icon" aria-hidden="true">
-              <svg viewBox="0 0 64 64"><path d="M5 20h33v25H5z"/><path d="M38 29h11l10 10v6H38z"/><circle cx="18" cy="50" r="6"/><circle cx="49" cy="50" r="6"/></svg>
-            </div>
-            <h2>Amplo para caminhões</h2>
-            <p>Espaço de sobra para caminhões, carretas e veículos de grande porte.</p>
-          </article>
-          <article class="feature-card">
-            <div class="feature-icon" aria-hidden="true">
-              <svg viewBox="0 0 64 64"><path d="M32 6l20 8v15c0 14-8 23-20 29C20 52 12 43 12 29V14z"/><path d="M32 17v28"/></svg>
-            </div>
-            <h2>Segurança total</h2>
-            <p>Estrutura pensada para você e seu veículo descansarem com tranquilidade.</p>
-          </article>
-          <article class="feature-card">
-            <div class="feature-icon" aria-hidden="true">
-              <svg viewBox="0 0 64 64"><path d="M17 27l5-11h20l5 11 7 5v13H10V32z"/><circle cx="19" cy="46" r="5"/><circle cx="45" cy="46" r="5"/><path d="M18 32h28"/></svg>
-            </div>
-            <h2>Fácil acesso</h2>
-            <p>Localização estratégica e área de manobra prática e sem complicação.</p>
-          </article>
-          <article class="feature-card">
-            <div class="feature-icon" aria-hidden="true">
-              <svg viewBox="0 0 64 64"><rect x="8" y="15" width="48" height="31" rx="5"/><path d="M14 23h8m5 0h8m5 0h8M16 46v7m32-7v7"/><circle cx="18" cy="52" r="4"/><circle cx="46" cy="52" r="4"/></svg>
-            </div>
-            <h2>Também para ônibus</h2>
-            <p>Estrutura preparada para receber ônibus e vans com conforto e segurança.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="parking-gallery" id="estacionamento">
+    <section class="stay-section" id="hospedagem" data-nav-section>
       <div class="content-width">
-        <div class="section-heading-dark">
-          <h2>VEJA NOSSO ESTACIONAMENTO</h2>
-          <p>Espaço real, seguro e preparado para você.</p>
+        <div class="section-heading reveal"><div><span class="eyebrow eyebrow-light"><i></i> Hospedagem descomplicada</span><h2>O essencial para uma boa estadia.</h2></div><p>Uma experiência direta e acolhedora, pensada para quem valoriza praticidade antes, durante e depois da viagem.</p></div>
+        <div class="stay-grid">
+          <article class="stay-card reveal"><span class="stay-number">01</span><div class="stay-icon"><svg aria-hidden="true" viewBox="0 0 48 48"><path d="M6 31V17h36v14M6 38V25h36v13M6 38v5m36-5v5"/><path d="M11 25v-5h11v5m4 0v-5h11v5"/></svg></div><h3>Descanso e conforto</h3><p>Um lugar para desacelerar, recuperar as energias e aproveitar uma estadia tranquila em Passos.</p></article>
+          <article class="stay-card reveal reveal-delay"><span class="stay-number">02</span><div class="stay-icon"><svg aria-hidden="true" viewBox="0 0 48 48"><path d="M9 41V13l15-7 15 7v28M4 41h40"/><path d="M17 18h3m8 0h3m-14 8h3m8 0h3m-14 8h3m8 0h3"/></svg></div><h3>Praticidade na chegada</h3><p>Acesso fácil, contato rápido com a recepção e estacionamento no próprio hotel.</p></article>
+          <article class="stay-card stay-card-accent reveal reveal-delay-2"><span class="stay-number">03</span><div class="stay-icon"><svg aria-hidden="true" viewBox="0 0 48 48"><path d="M10 11h22v23H10zM32 18h7l5 6v10H32z"/><circle cx="18" cy="37" r="4"/><circle cx="37" cy="37" r="4"/></svg></div><h3>Ideal para quem está na estrada</h3><p>Carros, vans, caminhões e ônibus contam com espaço para estacionar e manobrar.</p></article>
         </div>
-        <div class="gallery-grid">
-          <figure><img src="assets/estacionamento-vazio.webp" alt="Área ampla e vazia do estacionamento do Constantino's Hotel" loading="lazy"></figure>
-          <figure><img src="assets/estacionamento-onibus.webp" alt="Ônibus estacionado no Constantino's Hotel" loading="lazy"></figure>
-          <figure><img src="assets/estacionamento-caminhoes.webp" alt="Caminhões e veículos no estacionamento do Constantino's Hotel" loading="lazy"></figure>
-          <figure><img src="assets/fachada-constantinos-v3.webp" alt="Fachada do Constantino's Hotel em Passos - MG" loading="lazy"></figure>
+        <div class="booking-box reveal">
+          <div class="booking-intro"><span>Consulta rápida</span><h3>Planeje sua estadia</h3><p>Preencha os dados e envie sua consulta pronta para a recepção pelo WhatsApp.</p></div>
+          <form class="booking-form" id="booking-form">
+            <label><span>Data de chegada</span><input id="checkin" name="checkin" type="date" required></label>
+            <label><span>Número de hóspedes</span><select id="guests" name="guests"><option value="1 hóspede">1 hóspede</option><option value="2 hóspedes" selected>2 hóspedes</option><option value="3 hóspedes">3 hóspedes</option><option value="4 ou mais hóspedes">4 ou mais</option></select></label>
+            <label><span>Veículo</span><select id="vehicle" name="vehicle"><option value="carro">Carro</option><option value="moto">Moto</option><option value="van">Van</option><option value="caminhão">Caminhão</option><option value="ônibus">Ônibus</option><option value="sem veículo">Sem veículo</option></select></label>
+            <button class="button button-yellow" type="submit">Consultar agora <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+          </form>
         </div>
+      </div>
+    </section>
 
-        <div class="parking-owned">
-          <div class="parking-owned-main">
-            <div class="parking-e">E</div>
-            <div>
-              <h3>ESTACIONAMENTO PRÓPRIO E EXCLUSIVO</h3>
-              <p>Mais comodidade, mais segurança e mais tranquilidade para você.</p>
+    <section class="parking-section" id="estacionamento" data-nav-section>
+      <div class="parking-bg-text" aria-hidden="true">ESTACIONAMENTO</div>
+      <div class="content-width parking-layout">
+        <div class="parking-copy reveal">
+          <span class="eyebrow"><i></i> Nosso grande diferencial</span><h2>Espaço para chegar. Tranquilidade para descansar.</h2>
+          <p>Um estacionamento próprio e amplo faz toda a diferença para quem viaja. Aqui há espaço para veículos leves e pesados, com entrada, saída e manobra facilitadas.</p>
+          <ul class="check-list"><li><span>✓</span> Exclusivo para hóspedes</li><li><span>✓</span> Sem custo adicional</li><li><span>✓</span> Carros, caminhões, vans e ônibus</li></ul>
+          <a class="button button-navy js-whatsapp" data-message="Olá! Gostaria de consultar hospedagem e espaço no estacionamento do Constantino's Hotel." href="https://wa.me/5535988448287" target="_blank" rel="noopener">Consultar vaga <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+        <div class="parking-media reveal reveal-delay">
+          <div class="parking-visual" data-gallery-placeholder aria-label="Estacionamento para diferentes tipos de veículos">
+            <div class="parking-sign" aria-hidden="true"><span>E</span><small>HÓSPEDES</small></div>
+            <div class="parking-lanes" aria-hidden="true"><i></i><i></i><i></i></div>
+            <div class="vehicle-cards">
+              <article><svg aria-hidden="true" viewBox="0 0 64 48"><path d="M9 22h35l8 8v9H7V27Z"/><path d="M15 22l5-10h20l5 10M17 28h29"/><circle cx="18" cy="40" r="5"/><circle cx="44" cy="40" r="5"/></svg><span>Carros e vans</span></article>
+              <article><svg aria-hidden="true" viewBox="0 0 64 48"><path d="M5 12h35v27H5zM40 22h10l9 9v8H40z"/><circle cx="17" cy="40" r="5"/><circle cx="50" cy="40" r="5"/></svg><span>Caminhões</span></article>
+              <article><svg aria-hidden="true" viewBox="0 0 64 48"><rect x="7" y="8" width="50" height="31" rx="5"/><path d="M14 16h9m5 0h9m5 0h9M14 24h37M15 39v5m34-5v5"/><circle cx="17" cy="43" r="4"/><circle cx="47" cy="43" r="4"/></svg><span>Ônibus</span></article>
             </div>
+            <p><strong>Estacione no próprio hotel</strong><span>Mais espaço e praticidade para a sua chegada.</span></p>
           </div>
-          <ul>
-            <li>Espaço exclusivo para hóspedes</li>
-            <li>Sem custo adicional</li>
-            <li>Entrada e saída facilitada</li>
-          </ul>
+          <div class="gallery" data-photo-gallery aria-label="Fotos do estacionamento" hidden></div>
         </div>
       </div>
     </section>
 
-    <section class="room-cta" id="quartos">
-      <div class="content-width room-cta-inner">
-        <div class="room-copy">
-          <div class="round-whatsapp" aria-hidden="true">◉</div>
-          <div>
-            <h2>PRECISA DE UM QUARTO HOJE?</h2>
-            <p>Fale direto com a recepção e garanta sua hospedagem agora mesmo.</p>
-          </div>
+    <section class="location-section" id="localizacao" data-nav-section>
+      <div class="content-width location-layout">
+        <div class="location-card reveal">
+          <span class="eyebrow eyebrow-light"><i></i> Encontre o Constantino's</span><h2>Bem localizado em Passos.</h2><p class="address">Av. Juca Stockler, 1495<br><strong>Passos — Minas Gerais</strong></p>
+          <div class="location-actions"><a class="button button-yellow" href="https://www.google.com/maps/dir/?api=1&destination=Constantino%27s+Hotel%2C+Av.+Juca+Stockler%2C+1495%2C+Passos%2C+MG" target="_blank" rel="noopener">Traçar rota <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a class="location-phone" href="tel:+553535215708"><span>Ligue para a recepção</span><strong>(35) 3521-5708</strong></a></div>
         </div>
-        <a class="button button-yellow button-large js-whatsapp" data-message="Olá! Preciso de um quarto hoje. Gostaria de consultar disponibilidade no Constantino's Hotel." href="https://wa.me/5535988448287" target="_blank" rel="noopener">Consultar disponibilidade</a>
+        <a class="map-card reveal reveal-delay" href="https://www.google.com/maps/search/?api=1&query=Constantino%27s+Hotel+Av.+Juca+Stockler+1495+Passos+MG" target="_blank" rel="noopener" aria-label="Abrir localização do Constantino's Hotel no Google Maps">
+          <div class="map-grid" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div><svg class="map-route" aria-hidden="true" viewBox="0 0 520 330"><path d="M-10 255C75 239 72 171 149 183s74 80 145 54 54-108 126-115 82 42 116 20"/></svg><span class="map-pin" aria-hidden="true"><svg viewBox="0 0 32 40"><path d="M16 39S30 26.7 30 14A14 14 0 0 0 2 14c0 12.7 14 25 14 25Z"/><circle cx="16" cy="14" r="5"/></svg></span><span class="map-label"><small>Você chegou</small><strong>Constantino's Hotel</strong></span><span class="map-open">Abrir no Google Maps <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </a>
       </div>
     </section>
 
-    <section class="location-strip" id="localizacao">
-      <div class="content-width location-grid">
-        <div>
-          <span>LOCALIZAÇÃO</span>
-          <h2>Av. Juca Stockler, 1495</h2>
-          <p>Passos - MG</p>
+    <section class="faq-section" aria-labelledby="faq-title">
+      <div class="content-width faq-layout">
+        <div class="faq-intro reveal"><span class="eyebrow"><i></i> Antes de chegar</span><h2 id="faq-title">Dúvidas frequentes</h2><p>Não encontrou sua resposta? A recepção atende diretamente pelo telefone e WhatsApp.</p><a class="text-link js-whatsapp" data-message="Olá! Tenho uma dúvida sobre a hospedagem no Constantino's Hotel." href="https://wa.me/5535988448287" target="_blank" rel="noopener">Falar com a recepção <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+        <div class="accordion reveal reveal-delay">
+          <details><summary>Como consultar valores e disponibilidade?<span></span></summary><p>Envie uma mensagem pelo WhatsApp ou ligue para a recepção. Informe a data de chegada e a quantidade de hóspedes para agilizar o atendimento.</p></details>
+          <details><summary>O hotel possui estacionamento próprio?<span></span></summary><p>Sim. O estacionamento é próprio, exclusivo para hóspedes e sem custo adicional.</p></details>
+          <details><summary>Há espaço para caminhões e ônibus?<span></span></summary><p>Sim. A área recebe carros, vans, caminhões e ônibus. Para veículos grandes, consulte a disponibilidade antes de chegar.</p></details>
+          <details><summary>Como chegar ao hotel?<span></span></summary><p>Estamos na Av. Juca Stockler, 1495, em Passos — MG. Use o botão “Traçar rota” para abrir o melhor caminho no Google Maps.</p></details>
         </div>
-        <a class="button button-outline-light" href="https://www.google.com/maps/search/?api=1&query=Constantino%27s+Hotel+Av.+Juca+Stockler+1495+Passos+MG" target="_blank" rel="noopener">Abrir no mapa</a>
       </div>
     </section>
+
+    <section class="final-cta" aria-label="Faça sua reserva"><div class="content-width final-cta-inner reveal"><div><span>Pronto para descansar?</span><h2>Sua próxima parada é no Constantino's.</h2></div><a class="button button-yellow button-large js-whatsapp" data-message="Olá! Gostaria de reservar uma hospedagem no Constantino's Hotel." href="https://wa.me/5535988448287" target="_blank" rel="noopener">Consultar disponibilidade <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></section>
   </main>
 
-  <footer class="site-footer" id="contato">
+  <footer class="site-footer" id="contato" data-nav-section>
     <div class="content-width footer-grid">
-      <div class="footer-brand">
-        <a class="brand brand-footer" href="#inicio">
-          <span class="brand-name">CONSTANTINO'S</span>
-          <span class="brand-sub"><i></i> HOTEL <i></i></span>
-        </a>
-        <p>A parada estratégica em Passos - MG para quem precisa de descanso, segurança e bom atendimento.</p>
-      </div>
-
-      <div class="footer-column">
-        <h3>Contato</h3>
-        <a href="tel:+553535215708">☎ &nbsp;(35) 3521-5708</a>
-        <a class="js-whatsapp" data-message="Olá! Gostaria de informações sobre o Constantino's Hotel." href="https://wa.me/5535988448287" target="_blank" rel="noopener">◉ &nbsp;(35) 98844-8287</a>
-        <span>⌖ &nbsp;Av. Juca Stockler, 1495<br><b>Passos - MG</b></span>
-      </div>
-
-      <div class="footer-column">
-        <h3>Links rápidos</h3>
-        <a href="#inicio">Início</a>
-        <a href="#quartos">Quartos</a>
-        <a href="#estrutura">Estrutura</a>
-        <a href="#estacionamento">Estacionamento</a>
-        <a href="#localizacao">Localização</a>
-        <a href="#contato">Contato</a>
-      </div>
-
-      <div class="footer-column">
-        <h3>Siga-nos</h3>
-        <div class="socials" aria-label="Redes sociais">
-          <a href="#" aria-label="Instagram">◎</a>
-          <a href="#" aria-label="Facebook">f</a>
-        </div>
-      </div>
+      <div class="footer-brand"><a class="brand brand-footer" href="#inicio" aria-label="Constantino's Hotel — voltar ao início"><span class="brand-name">CONSTANTINO'S</span><span class="brand-sub"><i></i> HOTEL <i></i></span></a><p>Uma parada estratégica em Passos — MG para quem busca descanso, praticidade e espaço para estacionar.</p></div>
+      <div class="footer-column"><h3>Fale conosco</h3><a href="tel:+553535215708"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M8.5 3H5.8A2.8 2.8 0 0 0 3 5.8C3 14.2 9.8 21 18.2 21a2.8 2.8 0 0 0 2.8-2.8v-2.7l-4-1-1.3 2.4a13.6 13.6 0 0 1-8.6-8.6L9.5 7Z"/></svg><span>(35) 3521-5708</span></a><a class="js-whatsapp" data-message="Olá! Gostaria de informações sobre o Constantino's Hotel." href="https://wa.me/5535988448287" target="_blank" rel="noopener"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M20 11.5a8 8 0 0 1-11.7 7.1L4 20l1.4-4.2A8 8 0 1 1 20 11.5Z"/><path d="M9 8.5c.3 2.8 1.8 4.3 4.7 4.9l1-1.1 1.8.9c.2.1.3.3.2.6-.3 1.1-1.1 1.7-2.2 1.7-3.8-.1-7.8-4-7.9-7.8 0-1.1.6-1.9 1.7-2.2.3-.1.5 0 .6.2l.9 1.8Z"/></svg><span>(35) 98844-8287</span></a><a href="https://www.google.com/maps/search/?api=1&query=Constantino%27s+Hotel+Av.+Juca+Stockler+1495+Passos+MG" target="_blank" rel="noopener"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 22s7-6.2 7-13A7 7 0 0 0 5 9c0 6.8 7 13 7 13Z"/><circle cx="12" cy="9" r="2"/></svg><span>Av. Juca Stockler, 1495<br>Passos — MG</span></a></div>
+      <div class="footer-column footer-links"><h3>Navegue</h3><a href="#hotel">O hotel</a><a href="#hospedagem">Hospedagem</a><a href="#estacionamento">Estacionamento</a><a href="#localizacao">Localização</a></div>
+      <div class="footer-column footer-action"><h3>Consulte sua estadia</h3><p>Envie uma mensagem para a recepção e verifique a disponibilidade.</p><a class="footer-whatsapp js-whatsapp" data-message="Olá! Gostaria de consultar a disponibilidade no Constantino's Hotel." href="https://wa.me/5535988448287" target="_blank" rel="noopener">Chamar no WhatsApp <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
     </div>
-
-    <div class="footer-bottom">© <span id="year"></span> Constantino's Hotel. Todos os direitos reservados.</div>
+    <div class="footer-bottom"><span>© <span id="year"></span> Constantino's Hotel. Todos os direitos reservados.</span><a href="#inicio">Voltar ao topo ↑</a></div>
   </footer>
 
-  <a class="whatsapp-float js-whatsapp" data-message="Olá! Gostaria de informações sobre o Constantino's Hotel." href="https://wa.me/5535988448287" target="_blank" rel="noopener" aria-label="Falar com o Constantino's Hotel pelo WhatsApp">
-    <img src="/assets/icon-whatsapp.png" alt="WhatsApp" width="38" height="38">
-  </a>
+  <a class="whatsapp-float js-whatsapp" data-message="Olá! Gostaria de informações sobre o Constantino's Hotel." href="https://wa.me/5535988448287" target="_blank" rel="noopener" aria-label="Falar com o Constantino's Hotel pelo WhatsApp"><img src="assets/icon-whatsapp.png" alt="" width="50" height="50"><span>Fale conosco</span></a>
 
-  <script src="script.js?v=20260903"></script>
+  <!-- Para ativar estas fotos, altere showParkingGallery para true no início de script.js. -->
+  <template id="parking-gallery-template">
+    <button class="gallery-item gallery-main" type="button" aria-label="Ampliar foto da área do estacionamento"><img src="assets/estacionamento-vazio.webp" alt="Área ampla e demarcada do estacionamento" width="239" height="157" loading="lazy"><span>Área ampla</span></button>
+    <button class="gallery-item" type="button" aria-label="Ampliar foto de ônibus no estacionamento"><img src="assets/estacionamento-onibus.webp" alt="Ônibus estacionado no Constantino's Hotel" width="238" height="157" loading="lazy"><span>Para ônibus</span></button>
+    <button class="gallery-item" type="button" aria-label="Ampliar foto de caminhões no estacionamento"><img src="assets/estacionamento-caminhoes.webp" alt="Caminhões e carros no estacionamento do hotel" width="242" height="157" loading="lazy"><span>Para caminhões</span></button>
+  </template>
+  <dialog class="lightbox" id="gallery-lightbox" aria-label="Galeria de fotos"><button class="lightbox-close" type="button" aria-label="Fechar galeria">×</button><button class="lightbox-nav lightbox-prev" type="button" aria-label="Foto anterior">‹</button><figure><img src="" alt=""><figcaption></figcaption></figure><button class="lightbox-nav lightbox-next" type="button" aria-label="Próxima foto">›</button></dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
 </body>
 </html>
