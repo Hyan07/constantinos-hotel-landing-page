@@ -68,15 +68,15 @@ img, svg { display: block; max-width: 100%; }
 .mobile-nav .mobile-nav-cta { margin-top: 14px; border: 0; border-radius: 9px; background: var(--yellow); color: var(--navy-950); text-align: center; }
 
 .hero { position: relative; min-height: 760px; display: flex; overflow: hidden; isolation: isolate; color: #fff; background: var(--navy-950); }
-.hero-photo { position: absolute; inset: 0; z-index: -3; background-image: url("assets/fachada-constantinos-v3.webp"); background-repeat: no-repeat; background-size: cover; background-position: center 40%; transform: scale(1.015); }
+.hero-photo { position: absolute; inset: 0; z-index: -3; width: 100%; height: 100%; object-fit: cover; object-position: center 40%; transform: scale(1.015); }
 .hero-shade { position: absolute; inset: 0; z-index: -2; background: linear-gradient(90deg, rgba(2,13,46,.98) 0%, rgba(2,13,46,.93) 32%, rgba(3,18,59,.70) 53%, rgba(3,18,59,.20) 78%, rgba(2,13,46,.1) 100%), linear-gradient(0deg, rgba(2,13,46,.75), rgba(2,13,46,0) 58%); }
 .hero::before { content: ""; position: absolute; z-index: -1; inset: 0; background: radial-gradient(circle at 12% 60%, rgba(19,65,159,.22), transparent 34%); }
 .hero-content { min-height: 760px; display: flex; align-items: center; padding-top: 91px; }
-.hero-copy { width: min(650px, 60%); padding: 76px 0 92px; }
+.hero-copy { width: min(780px, 68%); padding: 76px 0 92px; }
 .eyebrow { display: inline-flex; align-items: center; gap: 10px; color: var(--navy-700); font: 800 13px/1 var(--display); letter-spacing: .15em; text-transform: uppercase; }
 .eyebrow i { width: 28px; height: 3px; background: var(--yellow); }
 .eyebrow-light { color: rgba(255,255,255,.83); }
-.hero h1 { max-width: 640px; margin: 22px 0 20px; font: 800 clamp(68px, 7.1vw, 103px)/.84 var(--display); letter-spacing: -.04em; text-transform: uppercase; text-wrap: balance; }
+.hero h1 { max-width: 780px; margin: 22px 0 20px; font: 800 clamp(66px, 6.1vw, 88px)/.86 var(--display); letter-spacing: -.04em; text-transform: uppercase; text-wrap: balance; }
 .hero h1 strong { display: block; color: var(--yellow); font-weight: 900; }
 .hero-copy > p { max-width: 570px; margin: 0; color: rgba(255,255,255,.86); font-size: 17px; line-height: 1.7; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
